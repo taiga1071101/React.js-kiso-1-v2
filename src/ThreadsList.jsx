@@ -5,7 +5,7 @@ const ThreadsList = () => {
   const [threads, setThreads] = useState([]);
   const url = "https://railway.bulletinboard.techtrain.dev/threads?offset=0";
 
-  const listDisplay = () => {
+  const fetchThreads = () => {
     fetch(url)
     .then((res) => res.json())
     .then((data) => {
@@ -17,7 +17,7 @@ const ThreadsList = () => {
   }
 
   useEffect(()=> {
-    listDisplay();
+    fetchThreads();
   }, []);
 
   return (
