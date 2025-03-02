@@ -10,10 +10,7 @@ const New = () => {
     const body = {'title': title};
     fetch(url, {
         method: 'POST',
-        headers: {
-          'accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body)
     });
 
